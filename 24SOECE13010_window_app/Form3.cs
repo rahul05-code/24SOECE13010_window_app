@@ -139,7 +139,78 @@ namespace _24SOECE13010_window_app
 
         private void dot_Click(object sender, EventArgs e)
         {
+            if (richTextBox1.Text == "0" && richTextBox1.Text != null)
+            {
+                richTextBox1.Text = ".";
+            }
+            else
+            {
+                richTextBox1.Text += ".";
+            }
 
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            num1 = 0;
+            num2 = 0;
+            result = 0;
+        }
+
+        private void clearall_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            num1 = 0;
+            num2 = 0;
+            result = 0;
+        }
+
+        private void edition_Click(object sender, EventArgs e)
+        {
+            num1 = Convert.ToDouble(richTextBox1.Text);
+            richTextBox1.Text = " ";
+            op = "+";
+        }
+
+        private void substract_Click(object sender, EventArgs e)
+        {
+            num1 = Convert.ToDouble(richTextBox1.Text);
+            richTextBox1.Text = " ";
+            op = "-";
+        }
+
+        private void equal_Click(object sender, EventArgs e)
+        {
+            num2 = Convert.ToDouble(richTextBox1.Text);
+           
+            if(op=="+")
+            {
+                result = num1 + num2;
+                richTextBox1.Text = result.ToString();
+            }
+            if(op=="-")
+            {
+                result = num1 - num2;
+                richTextBox1.Text = result.ToString();
+            }
+            if(op=="*")
+            {
+                result = num1 * num2;
+                richTextBox1.Text = result.ToString();
+            }
+            if(op=="/")
+            {
+                if(num2 == 0)
+                {
+                    richTextBox1.Text = "Cannot divide by zero";
+                }
+                else
+                {
+                    result = num1 / num2;
+                    richTextBox1.Text = result.ToString();
+                }
+            }
         }
 
         private void zero_Click(object sender, EventArgs e)

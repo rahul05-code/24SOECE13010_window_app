@@ -209,6 +209,7 @@
             this.clear.TabIndex = 14;
             this.clear.Text = "C";
             this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // clearall
             // 
@@ -218,6 +219,7 @@
             this.clearall.TabIndex = 13;
             this.clearall.Text = "CE";
             this.clearall.UseVisualStyleBackColor = true;
+            this.clearall.Click += new System.EventHandler(this.clearall_Click);
             // 
             // modulo
             // 
@@ -256,6 +258,7 @@
             this.equal.TabIndex = 21;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = false;
+            this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
             // edition
             // 
@@ -265,6 +268,7 @@
             this.edition.TabIndex = 20;
             this.edition.Text = "+";
             this.edition.UseVisualStyleBackColor = true;
+            this.edition.Click += new System.EventHandler(this.edition_Click);
             // 
             // substract
             // 
@@ -274,6 +278,7 @@
             this.substract.TabIndex = 19;
             this.substract.Text = "-";
             this.substract.UseVisualStyleBackColor = true;
+            this.substract.Click += new System.EventHandler(this.substract_Click);
             // 
             // multiply
             // 
