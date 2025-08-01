@@ -38,7 +38,9 @@ namespace _24SOECE13010_window_app
 
         private void button18_Click(object sender, EventArgs e)
         {
-
+            num1 = Convert.ToDouble(richTextBox1.Text);
+            richTextBox1.Text = " ";
+            op = "%";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -211,6 +213,32 @@ namespace _24SOECE13010_window_app
                     richTextBox1.Text = result.ToString();
                 }
             }
+            if(op == "%")
+            {
+                if(num2 == 0)
+                {
+                    richTextBox1.Text = "Cannot divide by zero";
+                }
+                else
+                {
+                    result = num1 % num2;
+                    richTextBox1.Text = result.ToString();
+                }
+            }
+        }
+
+        private void divide_Click(object sender, EventArgs e)
+        {
+            num1 = Convert.ToDouble(richTextBox1.Text);
+            richTextBox1.Text = " ";
+            op = "/";
+        }
+
+        private void multiply_Click(object sender, EventArgs e)
+        {
+            num1 = Convert.ToDouble(richTextBox1.Text);
+            richTextBox1.Text = " ";
+            op = "*";
         }
 
         private void zero_Click(object sender, EventArgs e)

@@ -239,6 +239,7 @@
             this.divide.TabIndex = 23;
             this.divide.Text = "/";
             this.divide.UseVisualStyleBackColor = true;
+            this.divide.Click += new System.EventHandler(this.divide_Click);
             // 
             // backspace
             // 
@@ -288,6 +289,7 @@
             this.multiply.TabIndex = 18;
             this.multiply.Text = "x";
             this.multiply.UseVisualStyleBackColor = true;
+            this.multiply.Click += new System.EventHandler(this.multiply_Click);
             // 
             // richTextBox1
             // 
